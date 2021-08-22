@@ -1,0 +1,311 @@
+/* . . . . ROOT . . . .  */
+:root {
+  --background-color-body: #FFFFFF;
+  --background-color-section: #F6F6F6;
+  --background-color-footer: #333333;
+  --color-blue-active: #03A9F4;
+  --color-text-black: #000;
+  --color-text-gry: #9396A6;
+  --color-services-red: #B33939;
+  --color-services-blue: #227093;
+  --color-services-green: #218C74;
+}
+
+
+/* . . . . global selector . . . .  */
+* {
+  letter-spacing: -0.5px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: var(--background-color-body);
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  list-style: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
+}
+
+/* . . . . main . . . .  */
+h3 {
+  font-size: 24px;
+  color: var(--color-text-black);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p.line {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+header .container {
+  padding-block: 20px;
+}
+
+header .container .logo {
+  font-size: 22px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+header .container li {
+  margin-left: 10px;
+  font-size: 14px;
+  position: relative;
+}
+
+header .container li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-blue-active);
+}
+
+header .container li:hover::after {
+  width: 100%;
+  transition: 0.4s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+}
+
+main article {
+  background-color: var(--background-color-section);
+  padding-block: 60px;
+}
+
+main article .container {
+  text-align: center;
+}
+
+main article .container h2 {
+  font-size: 36px;
+  color: var(--color-text-black);
+  font-weight: 600;
+  margin-bottom: calc(60px / 2);
+}
+
+@media (max-width: 767px) {
+  main article .container h2 {
+    font-size: 28px;
+  }
+}
+
+main article .container h2 span {
+  color: var(--color-blue-active);
+}
+
+main article .container p.line {
+  line-height: 1.6;
+  color: var(--color-text-black);
+  font-weight: 400;
+}
+
+main section.services {
+  background-color: var(--background-color-body);
+}
+
+main section.services .container figure {
+  flex-basis: 33%;
+  min-width: 200px;
+  padding: 60px 10px;
+}
+
+main section.services .container figure figcaption {
+  text-align: center;
+}
+
+main section.services .container figure figcaption h3 {
+  color: var(--color-text-black);
+  font-size: 18px;
+  font-weight: 600;
+  margin-block: calc(60px / 4);
+}
+
+main section.services .container figure figcaption p {
+  color: var(--color-text-gry);
+}
+
+main section.about {
+  background-color: var(--background-color-section);
+  padding-block: 60px;
+}
+
+main section.about .container figure img {
+  flex: 1;
+  min-width: 200px;
+}
+
+main section.about .container figure figcaption {
+  flex: 1;
+  min-width: 250px;
+  margin-left: 30px;
+}
+
+main section.about .container figure figcaption p.line {
+  color: var(--color-text-black);
+}
+
+main section.cont {
+  background-color: var(--background-color-body);
+  margin-block: 60px;
+}
+
+main section.cont .container>div.flex-col {
+  flex-basis: 30%;
+  min-width: 100px;
+  height: 140px;
+  justify-content: space-evenly;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+main section.cont .container>div.flex-col:nth-child(1) {
+  background-color: var(--color-services-red);
+}
+
+main section.cont .container>div.flex-col:nth-child(2) {
+  background-color: var(--color-services-blue);
+}
+
+main section.cont .container>div.flex-col:nth-child(3) {
+  background-color: var(--color-services-green);
+}
+
+main section.cont .container>div span {
+  color: var(--background-color-body);
+  font-size: 54px;
+  font-weight: 600;
+}
+
+main section.cont .container>div h5 {
+  color: var(--background-color-body);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+main section.skills {
+  background-color: var(--background-color-section);
+}
+
+main section.skills .container {
+  padding-block: 60px;
+}
+
+main section.skills .container h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main section.skills .container li {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+}
+
+main section.skills .container li p {
+  height: 100%;
+  min-width: 80px;
+  flex-basis: calc(12% - 10px);
+  color: var(--color-text-black);
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+main section.skills .container li div {
+  background-color: var(--background-color-body);
+  height: 100%;
+  line-height: 40px;
+  flex-basis: 88%;
+  position: relative;
+}
+
+main section.skills .container li span {
+  background-color: var(--color-blue-active);
+  color: var(--background-color-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+footer {
+  background-color: var(--background-color-footer);
+  height: 50px;
+  line-height: 50px;
+  margin-top: -20px;
+  color: var(--background-color-body);
+}
+
+footer a {
+  color: var(--color-blue-active);
+}
